@@ -2,7 +2,7 @@
 
 Prima di continuare con questa guida, assicuratevi di aver creato un account e di aver dato l'autorizzazione a `near cli` some spiegato [qui](https://github.com/48cfu/near-documentazione/blob/master/chiavi-spiegate.md). Per il resto di questa guida utilizzeremo l'account `mariorossi.betanet`.
 
-Esistono due modi per diventare validatore. La prima è eseguire il deployment di un apposito contratto in un vostro account secondario (spiegate qui di seguito). La seconda modalità è usare uno `staking pool factory` fornito dalla fondazione NEAR (Trovate le istruzioni [qui](https://github.com/48cfu/near-documentazione/blob/master/diventare-validatore-stakehouse.md).
+Esistono due modi per diventare validatore. La prima è eseguire il deployment di un apposito contratto in un vostro account secondario (spiegato qui sotto). La seconda modalità è usare uno `staking pool factory` fornito dalla fondazione NEAR (Trovate le istruzioni in italiano [qui](https://github.com/48cfu/near-documentazione/blob/master/diventare-validatore-stakehouse.md).
 
 ## Settate la variabile d'ambiente
 Assicuratevi che la variabile `NODE_ENV` sia settata come segue (betanet|testnet|guildnet|mainnet)
