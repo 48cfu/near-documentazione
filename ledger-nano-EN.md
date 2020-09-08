@@ -3,7 +3,7 @@ The Ledeger Nano S is one of the most used physical wallet on the market and pro
 
 With this tutorial you will learn how to setup and use Ledger with Near Protocol. In case of errors, see the troubleshoot paragraph at the end of this guide.
 
-## Setup a new device or recover a previous one
+## Setup a new device
 The first thing you have to is to install the ledger manager. To do this download [Ledger Live](https://www.ledger.com/ledger-live/download/).
 
 ![](./immagini/ledger-live.png?raw=true)
