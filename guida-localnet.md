@@ -1,5 +1,5 @@
 
-# Continuous Integration e Continuous Deployment
+# Continuous Integration e Continuous Deployment su Protocollo NEAR
 L'esecuzione di un validatore per supportare una rete non è un lavoro passivo, poiché si afferma che l'automazione del processo aiuta a mitigare i tempi di inattività e ad aumentare la produttività.
 
 Protocollo NEAR : NEAR è una piattaforma applicativa decentralizzata abbastanza sicura da gestire asset di alto valore come denaro o identità e sufficientemente performante da renderli utili per le persone comuni, mettendo il potere dell'Open Web nelle loro mani.
