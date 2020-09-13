@@ -1,5 +1,5 @@
 
-# Continuous Integration e Continuous Deployment su Protocollo NEAR
+# Continuous Integration e Continuous Deployment del Protocollo NEAR
 NEAR è una piattaforma decentralizzata e sicura che gestisce asset di alto valore, come denaro o identità, sufficientemente performante. I contenuti di questa guida:
 - Perché automatizzare?
 - Continuous Deployment e Continuous Integration
