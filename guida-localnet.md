@@ -22,7 +22,7 @@ Un ottimo modo per testare una nuova versione nearcore è eseguire una rete loca
 Dopo la compilazione di nearcore avviate la localnet per il test
 
 ```bash
-nearup localnet --binary-path ~/nearcore/target/release/ --nodocker
+nearup localnet --binary-path ~/nearcore/target/release/
 ```
 
 È quindi possibile verificare ciascuno dei nodi sulla rete locale confrontando la versione corrente in esecuzione sulla rete.
