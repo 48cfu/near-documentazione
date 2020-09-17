@@ -1,6 +1,5 @@
 # Monitoraggio del nodo NEAR con Prometheus and Grafana
-In questa guida imparerai come configurare un `Prometheus node exporter` e un `NEAR node exporter` per esportare le metriche del server NEAR sul server Prometheus e monitorarle con Grafana.
-Alla fine della guida saremo in grado di ricevere email automatiche di notifica nel caso il server NEAR non dovesse funzionare correttamente. L'email di notifica avra' ils eguente aspetto:
+In questa guida imparerai come configurare un `Prometheus node exporter` e un `NEAR node exporter` per esportare le metriche del server NEAR sul server Prometheus e monitorarle con Grafana. Alla fine della guida saremo in grado di ricevere email automatiche di notifica nel caso il server NEAR non dovesse funzionare correttamente. L'email di notifica avrà il seguente aspetto:
 
 ![](./immagini/grafana0.png?raw=true) 
 ## Preliminari
@@ -16,7 +15,7 @@ git clone https://github.com/masknetgoal634/near-prometheus-exporter
 cd near-prometheus-exporter
 sudo docker build -t near-prometheus-exporter .
 ```
-Ora che abbiamo compilato il "raccoglitore di statische" di NEAR, dobbiamo fare in modo che venga rilevato dal server di Prometheus. Per fare cio' e' necessario impostare il node exporter di NEAR come target di Prometheus.
+Ora che abbiamo compilato il "raccoglitore di statische" di NEAR, dobbiamo fare in modo che venga rilevato dal server di Prometheus. Per fare ciò è necessario impostare il node exporter di NEAR come target di Prometheus.
 
 ```bash
 cd ~/near-prometheus-exporter/etc
@@ -77,7 +76,7 @@ sudo docker run -dit \
     --path.sysfs=/host/sys
 ```
 
-Tenendo presente che il <POOL_ID> e' il nome del vostro smart contract, per esemprio `validator_italia_contract`, eseguite:
+Tenendo presente che il <POOL_ID> è il nome del vostro smart contract, per esemprio `validator_italia_contract`, eseguite:
 ```bash
 sudo docker run -dit \
     --restart always \
