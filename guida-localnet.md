@@ -6,12 +6,12 @@ NEAR è una piattaforma decentralizzata e sicura che gestisce asset di alto valo
 - Test
 
 ## Perché automatizzare?
-Eseguire un validatore su una rete blockchain che potenzialmente proteggerà miliardi di dollari di valore è una grande responsabilità. Se l'infrastruttura dovesse interrompersi o non funzionasse come previsto, è necessario mitigare il rischio di tempi di inattività e accelerare il ripristino.
+Avviare e mantenere un nodo validatore su una rete blockchain che potenzialmente proteggerà miliardi di euro di valore e altri asset è una grande responsabilità. Se l'infrastruttura dovesse interrompersi o non funzionaree come previsto, è necessario mitigare il rischio di tempi di inattività e accelerare il ripristino.
 Questo può essere fatto in molti modi e con vari gradi di sofisticazione. 
 
 ## Continuous Deployment e Continuous Integration
 
-Per la guida completa vedi qui [https://github.com/48cfu/nearcore-automatizzato](https://github.com/48cfu/nearcore-automatizzato).
+Per la guida completa vedi qui usando GITHUB ACTIONS E SHELL vedi qui: [https://github.com/48cfu/nearcore-automatizzato](https://github.com/48cfu/nearcore-automatizzato).
 
 ## Test
 Ultimo ma non meno importante è il testing: assicurarsi che l'artefatto che è stato creato dall'origine sia correttamente deployed. Come detto in precedenza, ci possono essere vari livelli di testing e casi limite. Tuttavia qui ci concentreremo su di uno.
