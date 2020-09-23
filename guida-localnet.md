@@ -11,7 +11,7 @@ Questo può essere fatto in molti modi e con vari gradi di sofisticazione.
 
 ## Continuous Deployment e Continuous Integration
 
-Per la guida completa vedi qui usando GITHUB ACTIONS E SHELL vedi qui: [https://github.com/48cfu/nearcore-automatizzato](https://github.com/48cfu/nearcore-automatizzato).
+Per la guida completa usando GITHUB ACTIONS e SHELL vedi qui: [https://github.com/48cfu/nearcore-automatizzato](https://github.com/48cfu/nearcore-automatizzato).
 
 ## Test
 Ultimo ma non meno importante è il testing: assicurarsi che l'artefatto che è stato creato dall'origine sia correttamente deployed. Come detto in precedenza, ci possono essere vari livelli di testing e casi limite. Tuttavia qui ci concentreremo su di uno.
