@@ -128,7 +128,7 @@ Aprite la dashboard cliccando su `Near Node Exporter Full`.
 
 ![](./immagini/grafana-roi.png?raw=true) 
 
-Per avere esattamente la stessa dashboard come nell'immagine precedente dovrete importare delle impostazioni aggiuntive [da qui](https://github.com/48cfu/near-documentazione/blob/master/dati/grafana-near-dashboard.json). Cliccate su `Impostazioni` (l'ingranaggio in alto a destra), poi su `<>JSON Model`. Sostituite il contenuto di questo campo con i dati del file [scaricato](https://github.com/48cfu/near-documentazione/blob/master/dati/grafana-near-dashboard.json). Successivamente salvate e tornate nella dashboard.
+Per avere esattamente la stessa dashboard come nell'immagine precedente dovrete importare delle impostazioni aggiuntive [da qui](https://github.com/48cfu/near-documentazione/blob/master/dati/grafana-near-dashboard.json). Cliccate su `Impostazioni` (l'ingranaggio in alto a destra), poi su `<>JSON Model`. Sostituite il contenuto di questo campo con i dati del file [scaricato](https://github.com/48cfu/near-documentazione/blob/master/dati/grafana-near-dashboard.json). Sostituite tutte le occorrenze di `127.0.0.1` con il vostro vero indirizzo IP.  Successivamente salvate e tornate nella dashboard.
 
 ![](./immagini/grafana-json.png?raw=true) 
 

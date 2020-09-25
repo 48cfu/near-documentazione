@@ -548,7 +548,7 @@
           "calcs": [
             "last"
           ],
-          "fields": "/^near_sync_state\\{instance=\"62\\.171.142.152:9333\", job=\"near\\-exporter\"\\}$/",
+          "fields": "/^near_sync_state\\{instance=\"127.0.0.1:9333\", job=\"near\\-exporter\"\\}$/",
           "values": false
         },
         "textMode": "value"
@@ -975,7 +975,7 @@
       "pluginVersion": "7.2.0",
       "targets": [
         {
-          "expr": "near_epoch_start_height{instance=\"62.171.142.152:9333\",job=\"near-exporter\"}",
+          "expr": "near_epoch_start_height{instance=\"127.0.0.1:9333\",job=\"near-exporter\"}",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -1485,10 +1485,10 @@
           "options": {
             "alias": "near_block_percentage",
             "binary": {
-              "left": "near_epoch_block_produced_number{instance=\"62.171.142.152:9333\", job=\"near-exporter\"}",
+              "left": "near_epoch_block_produced_number{instance=\"127.0.0.1:9333\", job=\"near-exporter\"}",
               "operator": "/",
               "reducer": "sum",
-              "right": "near_epoch_block_expected_number{instance=\"62.171.142.152:9333\", job=\"near-exporter\"}"
+              "right": "near_epoch_block_expected_number{instance=\"127.0.0.1:9333\", job=\"near-exporter\"}"
             },
             "mode": "binary",
             "reduce": {
@@ -2274,7 +2274,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum by (instance)(irate(node_cpu_seconds_total{mode=\"system\",instance=~\"62.171.142.152:9100\",job=~\"node\"}[5m])) * 100",
+          "expr": "sum by (instance)(irate(node_cpu_seconds_total{mode=\"system\",instance=~\"127.0.0.1:9100\",job=~\"node\"}[5m])) * 100",
           "format": "time_series",
           "hide": false,
           "interval": "",
@@ -2284,7 +2284,7 @@
           "step": 240
         },
         {
-          "expr": "sum by (instance)(irate(node_cpu_seconds_total{mode='user',instance=~\"62.171.142.152:9100\",job=~\"node\"}[5m])) * 100",
+          "expr": "sum by (instance)(irate(node_cpu_seconds_total{mode='user',instance=~\"127.0.0.1:9100\",job=~\"node\"}[5m])) * 100",
           "format": "time_series",
           "hide": false,
           "interval": "",
@@ -15116,8 +15116,8 @@
         "allValue": null,
         "current": {
           "selected": false,
-          "text": "62.171.142.152",
-          "value": "62.171.142.152"
+          "text": "127.0.0.1",
+          "value": "127.0.0.1"
         },
         "datasource": "Prometheus",
         "definition": "",
