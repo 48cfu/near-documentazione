@@ -83,7 +83,7 @@ sudo docker run -dit \
     --name near-exporter \
     -p 9333:9333 \
     --user root \
-    masknetgoal634/near-prometheus-exporter:latest /dist/main -accountId  validator_italia_contract -url http://<YOUR_IP_ADDRESS>:3030
+    masknetgoal634/near-prometheus-exporter:latest /dist/main -accountId  <POOL_ID> -url http://<IL_TUO_INDIRIZZO_IP>:3030
 ```
 
 ## Avvia Prometheus sul tuo server
@@ -133,40 +133,42 @@ Per avere esattamente la stessa dashboard come nell'immagine precedente dovrete 
 ![](./immagini/grafana-json.png?raw=true) 
 
 ## Configurazione delle notifiche
-Come prima cosa e' necessario configurare il canale con cui vogliamo ricevere le notifiche. All'inizio di questa guida abbiamo configurati i dati di accesso al server SMPT per permettere a Grafana di inviare notifiche via email. Dunque qui vedremo come configurare le notiche via email. Dal menu' a sinistra aprite la lista di canali di notifiche `Alerting -> Notification channels`. Aggiungete i vostri indirizzi email e salvate.
+Come prima cosa è necessario configurare il canale con cui vogliamo ricevere le notifiche. All'inizio di questa guida abbiamo configurati i dati di accesso al server SMPT per permettere a Grafana di inviare notifiche email. Dunque qui vedremo come configurare le notiche via email. Dal menù a sinistra aprite la lista di canali di notifiche `Alerting -> Notification channels`. Aggiungete i vostri indirizzi email e salvate.
 
 ![](./immagini/grafana-alert-roi.png?raw=true) 
 
-Nella dashboard arrivano gia' preconfigurate 3 tipi notifiche (nella dashboard, o nell'immagine qui sotto):
+Nella dashboard arrivano già preconfigurate 3 tipi notifiche (visibili nella dashboard, o nell'immagine qui sotto):
 - Problemi con la produzione tempestiva di blocchi
-- In caso di numero di peers basso
-- Problemi a ricevere dati dalla rete
+- Numero di peers basso
+- Problemi di ricezione dati dalla rete
 
 ![](./immagini/grafana-prenotifiche.png?raw=true) 
 
-Il cuore verde indica che tutto va come previsto. Potete i modificare o disabilitare il criterio di queste notiche a vostro piacimento.
+Un cuore verde di fianco al nome della scheda indica che tutto va come previsto, quindi nessuna notifica email spedita. Potete i modificare o disabilitare queste notifiche a vostro piacimento.
 
-## Esempio aggiunta notifiche 
-Se lo desiderate potrete aggiungere altri tipi di notifiche a Grafana. Qui vediamo l'esempio di CPU sotto stress.
-Dalla scheda CPU basic nella dashboard clicchiamo su `Edit` di fianco al titolo `CPU Basic`
+## Aggiunta notifica generica
+Se lo desiderate potrete aggiungere altri tipi di notifiche a Grafana. Qui vediamo come impostare una notifica automatica nel caso in cui la CPU sia sotto stress (>80%).
+Dalla scheda `CPU Basic` nella dashboard clicchiamo su `Edit` di fianco al titolo
 
 ![](./immagini/grafana-cpubasic.png?raw=true) 
 
-Se cliccate sulla scheda Alert vedrete il seguente messaggio di errore
+Se cliccate sulla scheda `Alert` vedrete il seguente messaggio di errore:
 >Template variables are not supported in alert queries
 
-Questo succedere perche' nella metriche (sotto la scheda Query) abbiamo delle variabili $node, $job e $port. Dovremo sostituire tutte le variabili con il oro valore nelle metriche da notificare.
+Questo succedere perché nella metriche (sotto la scheda `Query`) abbiamo delle variabili: in questo caso $node, $job e $port. 
 
 ![](./immagini/grafana-variables.png?raw=true) 
 
-Dopo la modifica, la figa nell'immagine precedere dovra' diventare come:
+Dovremo sostituire tutte le variabili con il loro valore nelle metriche da notificare. Dopo la modifica, la figa nell'immagine precedere dovrà diventare come:
 
 ![](./immagini/grafana-novariables.png?raw=true) 
 
-I valori corretti di queste variabili sono disponible dalla tua dashboard cliccando su `Impostazioni -> Variables` e poi cliccando sulla variabile di interesse. Ora aggiungeremo la notifica sul campo `Busy User` (e' la metrica `B` sotto la scheda `Query`): Cliccare sulla scheda `Alert` poi `Create Alert`.
+I valori corretti di queste variabili sono disponible dalla tua dashboard cliccando su `Impostazioni -> Variables` e poi cliccando sulla variabile di interesse. 
+
+Continuiamo ora configurando la notifica relativa alla metrica `Busy User` (la metrica `B` sotto la scheda `Query`): Cliccare sulla scheda `Alert` poi `Create Alert`.
 
 ![](./immagini/grafana-alert-cpu.png?raw=true) 
 
-Impostate il vostro criterio e messaggio di notifica e salvate. Fossimo stati interessati nel campo `Busy System` avremo scelto `query(A, 5m, now)` come condizione di attivazione della notifica. Alla fine un cuore comparira' di fianco al nome `CPU Basic` per indicare che una notifica e' stata configurata.
+Impostate il vostro criterio e messaggio di notifica e salvate. Se fossimo stati interessati alla metrica `Busy System` (la metrica `A` sotto la scheda `Query`) avremo scelto `query(A, 5m, now)` come condizione di attivazione della notifica. Ora nella dashboard un cuore comparirà affianco al nome `CPU Basic` per indicare che una notifica è stata configurata.
 
 ![](./immagini/grafana-finalcpu.png?raw=true) 
